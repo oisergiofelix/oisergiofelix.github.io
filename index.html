@@ -25,6 +25,7 @@
         font-size: 4.5em;
         font-weight: 500;
         margin-bottom: 0;
+        margin-top: 0;
         }
         p {
         font-size: 1.6em;
@@ -51,9 +52,45 @@
         a:hover:after {
         top: 0%;
         }
+        .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border: none;
+        color: #121314;
+        text-align: center;
+        font-size: calc(20px + 0.33vw);
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        float: right;
+        }
+        .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        }
+        .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+        .button:hover span {
+        padding-right: 25px;
+        }
+        .button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
     </style>
 </head>
-<body cz-shortcut-listen="true">
+<body>
     <h1>Oi, tudo bem?</h1>
     <p style="font-weight:500; font-size:2.2em">
     Sou o Sérgio Felix.
@@ -72,5 +109,8 @@
     que é onde falo sobre produtos, me adicionar no <a href="https://www.linkedin.com/in/osergiofelix" target="_blank">Linkedin</a> 
     ou me seguir no <a href="https://twitter.com/oisergiofelix" target="_blank">Twitter</a> :)
     </p>
+    <button class="button" style="vertical-align:middle"><span>Ir ao blog</span></button>
+    <button class="button" style="vertical-align:middle"><span>Techx 2019</span></button>
+
 </body>
 </html>
